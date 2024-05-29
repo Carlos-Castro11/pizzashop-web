@@ -1,31 +1,19 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 
+import { AppLayout } from './pages/_layouts/app'
+import { AuthLayout } from './pages/_layouts/auth'
 import { Dashboard } from './pages/app/dashboard'
 import { SignIn } from './pages/auth/signIn'
 
-interface AppRouteType {
-  path: string
-  page: React.ReactNode
-}
-
-const appRoutes: AppRouteType[] = [
+export const router = createBrowserRouter([
   {
     path: '/',
-    page: <Dashboard />,
+    element: <AppLayout />,
+    children: [{ path: '/', element: <Dashboard /> }],
   },
   {
-    path: '/sign-in',
-    page: <SignIn />,
+    path: '/',
+    element: <AuthLayout />,
+    children: [{ path: '/sign-in', element: <SignIn /> }],
   },
-]
-
-export function AppRouter() {
-  return (
-    <Routes>
-      {appRoutes.map((route) => {
-        return <Route key={route.path} path={route.path} element={route.page} />
-      })}
-    </Routes>
-  )
-}
+])
