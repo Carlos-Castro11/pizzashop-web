@@ -1,6 +1,7 @@
 export const Constants = {
   URLS: {
     DASHBOARD: '/',
+    ORDERS: '/orders',
     SIGN_IN: '/sign-in',
     SIGN_UP: '/sign-up',
   },

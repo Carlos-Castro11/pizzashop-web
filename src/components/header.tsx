@@ -20,7 +20,7 @@ export function Header() {
             <Home className="h-4 w-4" />
             Início
           </NavLink>
-          <NavLink to={Constants.URLS.SIGN_IN}>
+          <NavLink to={Constants.URLS.ORDERS}>
             <UtensilsCrossed className="h-4 w-4" />
             Pedidos
           </NavLink>
