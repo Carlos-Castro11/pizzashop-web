@@ -1,5 +1,5 @@
 /* eslint-disable no-constant-condition */
-type OrderStatus =
+export type OrderStatus =
   | 'pending'
   | 'canceled'
   | 'processing'
