@@ -1,4 +1,3 @@
-/* eslint-disable no-constant-condition */
 export type OrderStatus =
   | 'pending'
   | 'canceled'
